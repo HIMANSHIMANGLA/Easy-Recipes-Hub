@@ -1,14 +1,13 @@
 import React from "react";
 import "./style.css";
-//import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 
 export default function RecipeTile({ recipe }) {
   return (
-    recipe["recipe"]["image"].match(/\.(jpeg|jpg|gif|png)$/) != null && (
     <div className="recipeTile">
-      <img className ="recipeTile__img" src={recipe["recipe"]["image"]}/>
-      <p className="recipeTile__name">{recipe["recipe"]["label"]}</p>
+      <a href={recipe.recipe.url} className="recipeTile__link" target="_blank" rel="noopener noreferrer">
+        {recipe.recipe.label}
+      </a>
     </div>
-    )
   );
 }
