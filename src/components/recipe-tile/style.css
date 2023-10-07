@@ -1,25 +1,34 @@
 .recipeTile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    text-decoration-color: aliceblue;
-  }
+  display: inline-flexbox;
+  flex-direction: row;
+  justify-content: left;
+  align-items: normal;
+  cursor: pointer;
+  color: aliceblue;
+  margin: 30px; /* Add some margin around each tile */
+  width: 500px; /* Set a fixed width for each tile */
+  padding: 30px; /* Add padding to separate the content */
+  border: 1px solid #ccc; /* Add a border for each tile */
+  border-radius: 4px;
+  background-color: #f9f9f9; /* Add a background color to each tile */
+  text-align: inherit; /* Center-align the content */
+}
+
+
+
+.recipeTile__link {
+  text-decoration: none; /* Remove the default underline */
+  color: #0077cc; /* Change the link text color */
+  font-weight: bold; /* Make the link text bold */
+  transition: color 0.3s; /* Add a smooth color transition on hover */
+  font-size: 25px;
   
-  .recipeTile__img {
-    height: 150px;
-    width: 300px;
-    object-fit: cover;
-    border-radius: 4px;
-    border-color: white;
-    border-style: ridge;
-    text-decoration-color: aliceblue;
-  }
+  border-bottom: 1px solid #0077cc;
+
   
-  .recipeTile__name {
-    max-width: 200px;
-    text-align: center;
-    margin: 12px 0px;
-    text-decoration-color: aliceblue;
+  &:hover {
+    color: #005599;
   }
+}
+
+
